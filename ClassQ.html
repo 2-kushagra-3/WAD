@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js">
+	</script>
+
+	<script>
+		var myApp = angular.module("app", []);
+		myApp.controller("controller", function ($scope) {
+			$scope.arr = [];
+			$scope.push = function () {
+				// get the input value
+				var inputVal = $scope.arrInput;
+				$scope.arr.push(inputVal);
+
+			};
+		});
+	</script>
+</head>
+
+<body style="text-align:center;">
+	<h1 style="color:rgb(52, 90, 172);">
+		Code to Sort the input by the user
+	</h1>   
+	<div ng-app="app">
+		<div ng-controller="controller">
+			Input here:
+			<input type="text"
+				name="arrExample"
+				ng-model="arrInput">
+			<br><br>
+			Array = {{arr}}<br><br>
+			<button ng-click='push()'>
+				Click to push
+			</button>
+		</div>
+        <ul>
+            <!-- <li ng-repeat=
+        "x in customers | orderBy : 'inputVal'">
+                 {{x.name + ", " + x.city}} 
+            </li>
+        </ul> -->
+	</div>
+</body>
+</html>
