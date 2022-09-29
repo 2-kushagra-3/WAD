@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		How to pass an array as a function
+		parameter in JavaScript ?
+	</title>
+</head>
+
+<body>
+	<h1 style="color: green">
+		GeeksforGeeks
+	</h1>
+	
+	<b>
+		JavaScript | Passing an array
+		as a function parameter.
+	</b>
+	
+	<p>
+		The arguments passed
+		are '1, "Two", 3'
+	</p>
+	
+	<button onclick="passToFunction()">
+		Pass to function
+	</button>
+	
+	<script type="text/javascript">
+		
+		function passToFunction() {
+			arrayToPass = [1, "Two", 3];
+		
+			unmodifiableFunction.apply(null, arrayToPass);
+		}
+	
+		function unmodifiableFunction(a, b, c) {
+			console.log("First value is: ", a);
+			console.log("Second value is: ", b);
+			console.log("Third value is: ", c);
+		}
+	</script>
+</body>
+
+</html>
