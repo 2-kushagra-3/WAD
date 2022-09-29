@@ -17,9 +17,11 @@
 			};
 		});
 	</script>
+	
 </head>
 
 <body style="text-align:center;">
+	
 	<h1 style="color:rgb(52, 90, 172);">
 		Code to Sort the input by the user
 	</h1>   
@@ -32,15 +34,32 @@
 			<br><br>
 			Array = {{arr}}<br><br>
 			<button ng-click='push()'>
-				Click to push
+				<center>Click to push</center>
 			</button>
 		</div>
         <ul>
-            <!-- <li ng-repeat=
+			<!-- <button onclick="passToFunction()">
+				<center>Pass to function</center>
+			</button>
+            <li ng-repeat=
         "x in customers | orderBy : 'inputVal'">
                  {{x.name + ", " + x.city}} 
             </li>
-        </ul> -->
+        </ul> 
+		<script type="text/javascript">
+          
+			function passToFunction() {
+				arrayToPass = [1, "Two", 3];
+			  
+				unmodifiableFunction.apply(null, arrayToPass);
+			}
+		  
+			function unmodifiableFunction(a, b, c) {
+				console.log("First value is: ", a);
+				console.log("Second value is: ", b);
+				console.log("Third value is: ", c);
+			}
+		</script> -->
 	</div>
 </body>
 </html>
