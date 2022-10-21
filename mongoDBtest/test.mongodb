@@ -1,28 +1,31 @@
-db.createCollection("post112")
-db.post112.insert([
-	{
-		title: "MongoDB Overview",
-		description: "MongoDB is no SQL database",
-		by: "tutorials point",
-		url: "http://www.tutorialspoint.com",
-		tags: ["mongodb", "database", "NoSQL"],
-		likes: 100
-	},
-	{
-	title: "NoSQL Database",
-	description: "NoSQL database doesn't have tables",
-	by: "tutorials point",
-	url: "http://www.tutorialspoint.com",
-	tags: ["mongodb", "database", "NoSQL"],
-	likes: 20,
-	comments: [
-		{
-			user:"user1",
-			message: "My first comment",
-			dateCreated: new Date(2013,11,10,2,35),
-			like: 0
-		}
-	]
-}
-])
+// db.createCollection("post112")
+// db.post112.insert([
+// 	{
+// 		title: "MongoDB Overview",
+// 		description: "MongoDB is no SQL database",
+// 		by: "tutorials point",
+// 		url: "http://www.tutorialspoint.com",
+// 		tags: ["mongodb", "database", "NoSQL"],
+// 		likes: 100
+// 	},
+// 	{
+// 	title: "NoSQL Database",
+// 	description: "NoSQL database doesn't have tables",
+// 	by: "tutorials point",
+// 	url: "http://www.tutorialspoint.com",
+// 	tags: ["mongodb", "database", "NoSQL"],
+// 	likes: 20,
+// 	comments: [
+// 		{
+// 			user:"user1",
+// 			message: "My first comment",
+// 			dateCreated: new Date(2013,11,10,2,35),
+// 			like: 0
+// 		}
+// 	]
+// }
+// ])
+// db.post112.find().pretty()
+ db.post112.findOneAndUpdate(
+ 	{title: "NoSQL Database"},{ $set: { by: 'Kushagra V'}})
 db.post112.find().pretty()
