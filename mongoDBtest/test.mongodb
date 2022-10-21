@@ -26,6 +26,6 @@
 // }
 // ])
 // db.post112.find().pretty()
- db.post112.findOneAndUpdate(
- 	{title: "NoSQL Database"},{ $set: { by: 'Kushagra V'}})
-db.post112.find().pretty()
+//  db.post112.findOneAndUpdate(
+//  	{title: "NoSQL Database"},{ $set: { by: 'Kushagra V'}})
+// db.post112.find().pretty()
